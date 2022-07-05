@@ -46,7 +46,6 @@ menu.add_feature("Spawn Bodyguards", "toggle", 0, function(feat)
 							and not entity.is_entity_dead(peds[i])
 							and player.get_player_coords(player.player_id()):magnitude(entity.get_entity_coords(bodyguard)) < 30 
 							and	entity.get_entity_coords(peds[i]):magnitude(entity.get_entity_coords(bodyguard)) < 100 do
-								menu.notify("task shoot defend")
 								system.yield(0)
 							end
 							native.call(0x90D2156198831D69, bodyguard, 1)
@@ -63,7 +62,6 @@ menu.add_feature("Spawn Bodyguards", "toggle", 0, function(feat)
 						and entity.is_an_entity(target)
 						and player.get_player_coords(player.player_id()):magnitude(entity.get_entity_coords(bodyguard)) < 30 
 						and	entity.get_entity_coords(target):magnitude(entity.get_entity_coords(bodyguard)) < 100 do
-							menu.notify("task shoot")
 							system.yield(0)
 						end
 						native.call(0x90D2156198831D69, bodyguard, 1)
